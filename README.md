@@ -1,4 +1,4 @@
-# Open Source - i18n
+# Open Source - i10n
 
 Created by LeonMrBonnie
 
@@ -31,7 +31,7 @@ Then simply clone this repository into your main server resources folder.
 
 ```
 cd resources
-git clone https://github.com/LeonMrBonnie/altv-os-i18n
+git clone https://github.com/LeonMrBonnie/altv-os-i10n
 ```
 
 Ensure your `package.json` includes this property:
@@ -46,7 +46,7 @@ To use the resource it has to be added to the `deps` array in the `resource.cfg`
 Afterwards you can just import the resource by using:
 
 ```js
-import * as i18n from "altv-os-i18n";
+import * as i18n from "altv-os-i10n";
 ```
 
 And you can then use the exported functions.
