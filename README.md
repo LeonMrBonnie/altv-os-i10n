@@ -65,13 +65,16 @@ You can edit the translations by just editing the corresponding `.json` file.
 
 # Available functions
 
-### _ (alias translate)
+### translate
 
 Translates the given translation key to the given language.
 If the language or translation was not found, it will return the translation key.
 Otherwise it will return the translated version of the translation key.
 
 ```ts
+function translate(lang: string, key: string): string;
+
+// As of commit 74f7bb9, the new - preferred version of using `translate` can be accessed by directly importing the _ function.
 function _(lang: string, key: string): string;
 ```
 
