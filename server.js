@@ -36,6 +36,15 @@ export function _(lang, key) {
 }
 
 /**
+ * Translates the specified translation key with the specified language
+ * @param {string} lang Language name
+ * @param {string} key Translation key
+ */
+export function translate(lang, key) {
+    return _(lang, key);
+}
+
+/**
  * Returns all available languages
  */
 export function getLanguages() {
