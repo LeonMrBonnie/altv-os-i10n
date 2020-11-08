@@ -30,8 +30,7 @@ After simply add the name of this resource to your `server.cfg` resource section
 Then simply clone this repository into your main server resources folder.
 
 ```
-cd resources
-git clone https://github.com/LeonMrBonnie/altv-os-i10n i10n
+git clone https://github.com/LeonMrBonnie/altv-os-i10n resources/i10n
 ```
 
 Ensure your `package.json` includes this property:
