@@ -25,7 +25,7 @@ This resource is very simple.
 
 After simply add the name of this resource to your `server.cfg` resource section.
 
-`altv-os-i18n`
+`altv-os-i10n`
 
 Then simply clone this repository into your main server resources folder.
 
@@ -46,7 +46,7 @@ To use the resource it has to be added to the `deps` array in the `resource.cfg`
 Afterwards you can just import the resource by using:
 
 ```js
-import * as i18n from "altv-os-i10n";
+import * as i10n from "altv-os-i10n";
 ```
 
 And you can then use the exported functions.
