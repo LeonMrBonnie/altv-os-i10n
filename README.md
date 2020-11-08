@@ -31,7 +31,7 @@ Then simply clone this repository into your main server resources folder.
 
 ```
 cd resources
-git clone https://github.com/LeonMrBonnie/altv-os-i10n
+git clone https://github.com/LeonMrBonnie/altv-os-i10n i10n
 ```
 
 Ensure your `package.json` includes this property:
@@ -46,10 +46,14 @@ To use the resource it has to be added to the `deps` array in the `resource.cfg`
 Afterwards you can just import the resource by using:
 
 ```js
-import * as i10n from "altv-os-i10n";
+import * as i10n from "i10n";
 ```
 
-And you can then use the exported functions.
+And you can then use the exported functions-- though it would be preferable if you directly imported what is required:
+
+```js
+import { _ } from "i10n";
+```
 
 # Adding a new language or updating an existing one
 
@@ -61,14 +65,14 @@ You can edit the translations by just editing the corresponding `.json` file.
 
 # Available functions
 
-### translate
+### _ (alias translate)
 
 Translates the given translation key to the given language.
 If the language or translation was not found, it will return the translation key.
 Otherwise it will return the translated version of the translation key.
 
 ```ts
-function translate(lang: string, key: string): string;
+function _(lang: string, key: string): string;
 ```
 
 ### getLanguages
