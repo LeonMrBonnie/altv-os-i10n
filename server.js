@@ -28,11 +28,20 @@ async function loadLanguages() {
  * @param {string} lang Language name
  * @param {string} key Translation key
  */
-export function translate(lang, key) {
+export function _(lang, key) {
     if (!languages[lang]) return key;
     let translated = languages[lang][key];
     if (!translated) return key;
     return translated;
+}
+
+/**
+ * Translates the specified translation key with the specified language
+ * @param {string} lang Language name
+ * @param {string} key Translation key
+ */
+export function translate(lang, key) {
+    return _(lang, key);
 }
 
 /**
