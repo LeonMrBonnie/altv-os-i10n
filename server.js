@@ -9,8 +9,15 @@ const languages = {};
 const languagesPath = `${alt.getResourcePath(alt.resourceName)}\\languages`;
 
 async function loadLanguages() {
-    let langs = await util.promisify(fs.readdir)(languagesPath);
-    langs = langs.map((lang) => lang.replace(".json", ""));
+    let possibilities = await util.promisify(fs.readdir)(languagesPath);
+    let langs = [];
+
+    possibilities.forEach((lang) => {
+        if (lang.endsWith(".json")) {
+            langs.push(lang.replace(".json", ""));
+        }
+    });
+
     for (let language of langs) {
         let file = await util.promisify(fs.readFile)(
             `${languagesPath}\\${language}.json`,
