@@ -25,7 +25,7 @@ async function loadLanguages() {
         );
         let languageData = JSON.parse(file);
         languages[language] = languageData;
-        alt.log(`[i18n] Loaded language '${language}'`);
+        alt.log(`[i10n] Loaded language '${language}'`);
     }
     availableLanguages = langs;
 }
